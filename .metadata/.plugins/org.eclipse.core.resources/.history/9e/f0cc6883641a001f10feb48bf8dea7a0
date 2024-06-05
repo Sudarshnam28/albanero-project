@@ -1,0 +1,21 @@
+package com.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.modal.Customer;
+
+@Service
+public class CustomerDao {
+
+	
+	@Autowired
+	CustomerRepo custRepo;
+	
+	
+	public void registerCustomer(Customer cust) {
+		custRepo.save(cust);
+		
+	}
+
+}

@@ -1,0 +1,47 @@
+package com.modal;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Customer {
+   public String user_Name;
+   public String email_Id;
+   public long phone;
+   public String password;
+public Customer() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public String getUser_Name() {
+	return user_Name;
+}
+public void setUser_Name(String user_Name) {
+	this.user_Name = user_Name;
+}
+public String getEmail_Id() {
+	return email_Id;
+}
+public void setEmail_Id(String email_Id) {
+	this.email_Id = email_Id;
+}
+public long getPhone() {
+	return phone;
+}
+public void setPhone(long phone) {
+	this.phone = phone;
+}
+public String getPassword() {
+	return password;
+}
+public void setPassword(String password) {
+	this.password = password;
+}
+@Override
+public String toString() {
+	return "Customer [user_Name=" + user_Name + ", email_Id=" + email_Id + ", phone=" + phone + ", password=" + password
+			+ "]";
+}
+   
+   
+   
+}

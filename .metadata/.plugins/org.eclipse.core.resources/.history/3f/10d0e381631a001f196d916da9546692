@@ -1,0 +1,21 @@
+package com.spring.Spring.boot;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.dao.CustomerDao;
+
+@RestController
+public class Customer {
+
+	@Autowired
+	CustomerDao custDao;
+	
+	
+	@PostMapping("registerCustomer")
+	public  void registerCustomer(@RequestBody CustomerController cust){
+		custDao.registerCustomer(cust);
+	}
+}

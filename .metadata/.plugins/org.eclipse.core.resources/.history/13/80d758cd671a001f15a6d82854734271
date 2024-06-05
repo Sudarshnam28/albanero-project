@@ -1,0 +1,26 @@
+package com.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.modal.Customer;
+
+@Service
+public class CustomerDao {
+
+	
+	@Autowired
+	CustomerRepo custRepo;
+	
+	
+	public void registerCustomer(Customer cust) {
+		custRepo.save(cust);		
+	}
+
+
+	/*public Customer findByUserNamePasswordPhone(String user_Name, String password, long phone) {
+		// TODO Auto-generated method stub
+		return null;
+	}*/
+
+}
